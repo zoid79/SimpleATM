@@ -4,6 +4,8 @@ plugins {
 
 group = 'org.example'
 version = '1.0-SNAPSHOT'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 repositories {
     mavenCentral()
@@ -16,4 +18,9 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+jar {
+    manifest {
+        attributes 'Main-Class': 'org.example.main.Main'
+    }
 }
